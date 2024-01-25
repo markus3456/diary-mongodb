@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  # MongoDB service
+  mongodb:
+    build:
+      context: .
+      dockerfile: Dockerfile.mongodb
+    container_name: diary-mongodb
+    ports:
+      - "27017:27017"
+    networks:
+      - diary_network
+
+  # Diary web application service
+  diary-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: diary-web-app:latest
+    container_name: diary-web-app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    networks:
+      - diary_network
+
+networks:
+  diary_network:
+    driver: bridge

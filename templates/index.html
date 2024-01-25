@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary Web App</title>
+</head>
+<body>
+    <h1>My Diary</h1>
+    
+    <form action="/add_entry" method="post">
+        <textarea name="content" rows="4" cols="50" placeholder="Write your entry..."></textarea>
+        <br>
+        <input type="submit" value="Add Entry">
+    </form>
+
+    <h2>Entries</h2>
+    {% for entry in entries %}
+        <div>
+            <p>{{ entry.content }}</p>
+            <small>{{ entry.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</small>
+        </div>
+    {% endfor %}
+</body>
+</html>
