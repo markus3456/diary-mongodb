@@ -4,19 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diary Web App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #00ED64;
+            padding: 10px;
+            color: #001E2B;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #00ED64;
+            color: #001E2B;
+            padding: 10px 15px;
+            border: 1px solid #001E2B;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        h1, h2 {
+            font-family: 'Times New Roman', Times, serif;
+            color: #001E2B;
+        }
+
+        .entry {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        small {
+            display: block;
+            margin-top: 5px;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-    <h1>My Diary</h1>
-    
+    <header>
+        <h1>My Diary</h1>
+    </header>
+
     <form action="/add_entry" method="post">
-        <textarea name="content" rows="4" cols="50" placeholder="Write your entry..."></textarea>
+        <textarea name="content" rows="4" placeholder="Write your entry..."></textarea>
         <br>
         <input type="submit" value="Add Entry">
     </form>
 
     <h2>Entries</h2>
     {% for entry in entries %}
-        <div>
+        <div class="entry">
             <p>{{ entry.content }}</p>
             <small>{{ entry.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</small>
         </div>
