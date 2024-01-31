@@ -72,6 +72,8 @@
     <form action="/add_entry" method="post">
         <textarea name="content" rows="4" placeholder="Write your entry..."></textarea>
         <br>
+        <input type="number" name="duration" placeholder="Duration (minutes)">
+        <br>
         <input type="submit" value="Add Entry">
     </form>
 
@@ -79,8 +81,9 @@
     {% for entry in entries %}
         <div class="entry">
             <p>{{ entry.content }}</p>
-            <small>{{ entry.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</small>
+            <small>Duration: {{ entry.duration }} minutes - {{ entry.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</small>
         </div>
     {% endfor %}
+    
 </body>
 </html>
