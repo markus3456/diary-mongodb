@@ -7,6 +7,8 @@ services:
       context: .
       dockerfile: Dockerfile.mongodb
     container_name: diary-mongodb
+    volumes:
+      - /db/mongodb:/data/db
     ports:
       - "27017:27017"
     networks:
