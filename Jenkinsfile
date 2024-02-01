@@ -17,10 +17,10 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // Cleanup: Stop and remove Docker containers
-            sh 'docker-compose down'
-        }
-    }
-}
+//     post {
+//         always {
+//             // Cleanup: Stop and remove Docker containers
+//             sh 'docker-compose down'
+//         }
+//     }
+// }
