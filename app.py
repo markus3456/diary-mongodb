@@ -6,8 +6,9 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 # MongoDB Configuration
-#client = MongoClient('mongodb://mongodb:27017/')
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient('mongodb://mongodb:27017/')
+#client = MongoClient('mongodb://localhost:27017/')
+
 db = client['diary']
 entries_collection = db['entries']
 
