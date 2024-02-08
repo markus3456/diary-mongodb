@@ -1,0 +1,60 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 142-439-712
+INFO:werkzeug: * Detected change in 'c:\\Users\\marku\\Projects\\Python_Projects\\MongoDB_app\\app.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 142-439-712
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:23:31] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+INFO:root:Execution time for route /: 0.0 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:23:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:23:58] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+INFO:root:Execution time for route /: 0.0 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:23:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:24:48] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+INFO:root:Execution time for route /: 0.0 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:24:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:27:09] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+INFO:root:Execution time for route /: 0.0 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:27:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:27:41] "[32mGET /delete_entry/65c4ac7dda1a71f4ac3cb88d HTTP/1.1[0m" 302 -
+INFO:root:Execution time for route /: 0.0005412101745605469 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:27:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:38:52] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+INFO:root:Execution time for route /: 0.0 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:38:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:40:41] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+INFO:root:Execution time for route /: 0.0 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:40:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:40:42] "[32mGET /delete_entry/65c4afa9da1a71f4ac3cb88f HTTP/1.1[0m" 302 -
+INFO:root:Execution time for route /: 0.0005323886871337891 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 10:40:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.74:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 142-439-712
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 11:07:36] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+INFO:root:Execution time for route /: 0.0 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 11:07:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\marku\\Projects\\Python_Projects\\MongoDB_app\\accessdb.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 142-439-712
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.74:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 142-439-712
+INFO:root:Execution time for route /: 0.0 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 11:25:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 11:25:55] "[32mGET /delete_entry/65c4b5f8bbd5b1b9be07abde HTTP/1.1[0m" 302 -
+INFO:root:Execution time for route /: 0.0 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 11:25:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 11:26:15] "[32mPOST /add_entry HTTP/1.1[0m" 302 -
+INFO:root:Execution time for route /: 0.0005335807800292969 seconds
+INFO:werkzeug:127.0.0.1 - - [08/Feb/2024 11:26:15] "GET / HTTP/1.1" 200 -

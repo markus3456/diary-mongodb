@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 from bson.objectid import ObjectId
+import re
 
 # MongoDB Configuration
 client = MongoClient('mongodb://localhost:27017/')
@@ -24,7 +25,25 @@ def update_entry():
     entries = entries_collection.find(id)
     for entry in entries:
         print(entry)
-#c
+
+
+def query_content(a):
+    
+    query = {'content': {'$regex': re.compile(a, re.IGNORECASE)}}
+    specific_content_entries = entries_collection.find(query)
+    matching_count = entries_collection.count_documents(query)
+    for entry in specific_content_entries:
+        print(entry)
+    print("Number of matching Entries: ", matching_count)
+
+def query_duration(a):
+    specific_duration_entries = entries_collection.find({'duration': {'$gte': a}})
+    for entry in specific_duration_entries:
+        print(entry)
+ 
 #r = print_entries()
-u = update_entry() 
+#u = update_entry() 
+q1 = query_content('piano')
+q2 = query_duration(40)
+
 

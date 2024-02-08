@@ -2,15 +2,21 @@ from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 from datetime import datetime, timedelta
 from bson.objectid import ObjectId
+import logging
+import time
 
 app = Flask(__name__)
 
 # MongoDB Configuration
-client = MongoClient('mongodb://mongodb:27017/')
-#client = MongoClient('mongodb://localhost:27017/')
-
+#client = MongoClient('mongodb://mongodb:27017/')
+client = MongoClient('mongodb://localhost:27017/')
 db = client['diary']
 entries_collection = db['entries']
+
+
+# Create indexes
+entries_collection.create_index([('timestamp', 1)])  # Index for the 'timestamp' field
+entries_collection.create_index([('duration', 1)]) 
 
 
 # Function to create a new entry
@@ -45,18 +51,25 @@ def delete_entry(entry_id):
     return result.deleted_count > 0
 
 
-
+logging.basicConfig(filename='app.log', level=logging.INFO)
 
 # Routes
 @app.route('/')
 def index():
+    start_time = time.time()
     entries = get_all_entries()
+
+    
+
+    end_time = time.time()
+    logging.info(f"Execution time for route /: {end_time - start_time} seconds")
     return render_template('index.html', entries=entries)
 
 @app.route('/add_entry', methods=['POST'])
 def add_entry():
     content = request.form.get('content')
     duration = request.form.get('duration')
+    duration = int(duration)
     entry_id = create_entry(content, duration)
     return redirect(url_for('index'))
 
