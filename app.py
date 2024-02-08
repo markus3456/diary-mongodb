@@ -28,7 +28,7 @@ def create_entry( content, duration):
 
 # Function to retrieve all entries
 def get_all_entries():
-    entries = entries_collection.find().sort('timestamp', -1)
+    entries = entries_collection.find().sort('timestamp', -1).limit(10)
     return entries
 
 # Function to retrieve a specific entry by ID
@@ -58,8 +58,6 @@ logging.basicConfig(filename='app.log', level=logging.INFO)
 def index():
     start_time = time.time()
     entries = get_all_entries()
-
-    
 
     end_time = time.time()
     logging.info(f"Execution time for route /: {end_time - start_time} seconds")
